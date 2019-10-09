@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Animinated Form</title>
+</head>
+<style>
+	body{
+		background-image: url(img/IMG-527f5d6c.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+	}
+	#cat{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background: #34495e;
+	}
+	.pinnu{
+		width: 300px;
+		padding: 40px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background: #191919;
+		text-align: center;
+	}
+
+	.pinnu h1{
+		color: white;
+		text-transform: uppercase;
+		font-weight: 500;
+
+	}
+
+	.pinnu input[type = "text"],.pinnu input[type = "password"]{
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #3498db;
+			padding: 14px 10px;
+			width: 200px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition: 0.25s;
+	}
+
+	.pinnu input[type = "text"]:focus,.pinnu input[type = "password"]:focus{
+		width: 280px;
+		border-color: #2ecc71;
+	}
+
+	.pinnu input[type = "submit"]{
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #2ecc71;
+			padding: 14px 40px;
+			width: 200px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition: 0.25s;
+			cursor: pointer;
+	}
+	.pinnu input[type = "submit"]:hover{
+		background: #2ecc71;
+	}
+	.reg{
+		border: 2px solid;
+		border-color: #2ecc71;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left:70px;
+		padding-right: 70px;
+		border-radius: 30%;
+		text-decoration: none;
+		color: white;
+	}
+	.reg:hover{
+		background-color: #2ecc71;
+	}
+
+
+</style>
+<body background="IMG-527f5d6c.jpg">
+<div id="cat">
+<form class="pinnu" action="animinatedform.html" method="post">
+	<h1>login</h1>
+	
+	<input type="text" name="userid" placeholder="Username">
+	<input type="password" name="pswrd" placeholder="password">
+	<input type="submit" onclick="check(this.form)" value="Login">
+	<a href="file:///D:/cseHTML/fitness/form/register.html" class="reg">register</a>
+</form>
+</div>
+<script language="javascript">
+function check(form)
+{
+ if(form.userid.value == "fitness" && form.pswrd.value == "123456")
+  {
+    window.open('index.html')
+  }
+ else
+ {
+   alert("Error Password or Username")
+  }
+}
+</script>
+</body>
+</html>
